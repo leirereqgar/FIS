@@ -1,0 +1,6 @@
+[submodule "Práctica 1/doc/aqademia"]
+	path = Práctica 1/doc/aqademia
+	url = https://github.com/Groctel/aqademia/
+[submodule "aqademia"]
+	path = aqademia
+	url = https://github.com/Groctel/aqademia/
