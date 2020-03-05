@@ -1,18 +1,28 @@
-\RequirePackage[title=Fundamentos~de~Ingeniería~de~Software,
-                subtitle=Práctica~1,
-                author=Rafael~Guzmán~Valverde{,}~Alejandro~Molina~Criado{,}~Leire~Requena~García,
-                organization=Universidad\ de\ Granada,
-                section=,
-                language=spanish,
-                showsubtitle,
-                toc
-               ]{aqademia}
+\documentclass[10pt]{report}
+
+% Language and input encoding
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+% Document settings
+
+\usepackage{titling}
+	\author{Rafael Guzmán Valverde, Alejandro Molina Criado, Leire Requena García}
+	\title{Fundamentos de la Ingeniería del Software}
+	\date{\today}
+
+\usepackage[title=\thetitle]{aqademia}
+\aqsec{}
 
 % Document composition
 
 \begin{document}
 
-\aqtitle%
+\aqtitlepage{Universidad de Granada}
+            {Práctica 1}
+            {}
+\tableofcontents
 
 \input{apartados/1_introduccion.tex}
 
@@ -28,7 +38,8 @@
 
 \input{apartados/6_requisitos_no_funcionales.tex}
 
-\aqappendices%
+\aqapp{Apéndice}%
+
 \input{apartados/glosario.tex}
 
 \end{document}
