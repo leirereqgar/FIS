@@ -3,30 +3,37 @@
 % Language and input encoding
 
 \usepackage[spanish]{babel}
-\usepackage[utf8]{inputenc}
 
 % Document settings
 
 \usepackage{titling}
 	\author{Rafael Guzmán Valverde, Alejandro Molina Criado, Leire Requena García}
-	\title{Fundamentos de la Ingeniería del Software}
+	\title{Fundamentos\ de\ la\ Ingeniería\ del\ Software}
 	\date{\today}
 
 \usepackage[title=\thetitle]{aqademia}
+\aqchap{Apartado }
 \aqsec{}
+\aqssec{}
+\aqsssec{}
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
 
 % Document composition
 
 \begin{document}
 
-\aqtitlepage{Universidad de Granada}
+\aqtitlepage[nolicense]
+            {Universidad de Granada}
             {Práctica 1}
             {}
 \tableofcontents
 
 \input{apartados/1_introduccion.tex}
 
-\chapter{Sesiones de elicitación}
+\section{Sesiones de elicitación}
 \input{apartados/2_1_identificar_implicados.tex}
 \input{apartados/2_2_necesidades.tex}
 
@@ -38,7 +45,7 @@
 
 \input{apartados/6_requisitos_no_funcionales.tex}
 
-\aqapp{Apéndice}%
+\aqapp{Apéndice }%
 
 \input{apartados/glosario.tex}
 
