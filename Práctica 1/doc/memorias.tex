@@ -17,10 +17,6 @@
 \aqssec{}
 \aqsssec{}
 
-\renewcommand{\thesection}{\arabic{section}}
-\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
-\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
-
 % Document composition
 
 \begin{document}
@@ -31,22 +27,21 @@
             {}
 \tableofcontents
 
+\pagebreak
 \input{apartados/1_introduccion.tex}
 
-\section{Sesiones de elicitación}
+\chapter{Dominio del problema y descripción del sistema}
 \input{apartados/2_1_identificar_implicados.tex}
 \input{apartados/2_2_necesidades.tex}
 
 \input{apartados/3_objetivos.tex}
 
+\chapter{Lista estructurada de requisitos}
 \input{apartados/4_requisitos_informacion.tex}
-
 \input{apartados/5_requisitos_funcionales.tex}
-
 \input{apartados/6_requisitos_no_funcionales.tex}
 
 \aqapp{Apéndice }%
-
 \input{apartados/glosario.tex}
 
 \end{document}
