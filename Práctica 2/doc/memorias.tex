@@ -1,0 +1,46 @@
+\documentclass[10pt]{report}
+
+% Language and input encoding
+
+\usepackage[spanish]{babel}
+
+% Document settings
+
+\usepackage{titling}
+	\author{Rafael Guzmán Valverde, Alejandro Molina Criado, Leire Requena García}
+	\title{Fundamentos\ de\ la\ Ingeniería\ del\ Software}
+	\date{\today}
+
+\usepackage[title=\thetitle]{aqademia}
+\aqchap{Apartado }
+\aqsec{}
+\aqssec{}
+\aqsssec{}
+
+\usepackage{enumerate}
+% Document composition
+
+\begin{document}
+
+\aqtitlepage[nolicense]
+            {Universidad de Granada}
+            {Práctica 1}
+            {}
+\tableofcontents
+
+\pagebreak
+\input{apartados/1_introduccion.tex}
+
+\input{apartados/2-diagramas_casos_de_uso.tex}
+
+\input{apartados/3-descripcion_actores.tex}
+
+\input{apartados/4-casos_de_uso_plantilla_basica.tex}
+
+\input{apartados/5-diagramas_paquetes.tex}
+
+\aqapp{Apéndice }%
+\addcontentsline{toc}{part}{Apéndices}
+\input{apartados/glosario.tex}
+
+\end{document}
