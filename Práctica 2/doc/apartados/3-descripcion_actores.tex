@@ -1,1 +1,217 @@
 \chapter{Descripción de los actores}
+\section{Arrendador}
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Arrendador}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-01}} \\
+	\hline
+	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Persona que pone en alquiler su vivienda} \\
+	\hline
+	\multirow{2}{*}{\textbf{Características}} & \multicolumn{5}{l|[2pt]}{Registra sus propiedades en el sistema} \\
+	                                          & \multicolumn{5}{l|[2pt]}{Busca un inquilino para sus viviendas} \\
+	\hline
+	\multirow{3}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Arrendador --- Arrendatario} \\
+	                                     & \multicolumn{5}{l|[2pt]}{Arrendador --- Agente inmobiliario} \\
+	                                     & \multicolumn{5}{l|[2pt]}{Arrendatario $\longrightarrow$ Intercambiador} \\
+	\hline
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{} \\
+	\hline
+	\textbf{Autor}           & Grupo A2 & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{3cm}|p{8.81cm}|p{3cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{3}{|[2pt]l|[2pt]}{\textbf{Atributos}} \\
+	\hline
+	\textbf{Nombre} & \textbf{Descripción} & \textbf{Tipo} \\
+	\hline
+	Datos personales & Nombre, Apellido, DNI, correo, teléfono\ldots & Lista de cadenas de caracteres \\
+	\hline
+	Publicaciones & Anuncios de sus viviendas en alquiler & \\
+	\hline
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Comentarios} \\
+	\hline
+	\\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\section{Arrendatario}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Arrendatario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-01}} \\
+	\hline
+	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Persona que alquila una vivienda} \\
+	\hline
+	\multirow{2}{*}{\textbf{Características}} & \multicolumn{5}{l|[2pt]}{Busca una propiedad para alquilar} \\
+	                                          & \multicolumn{5}{l|[2pt]}{Se le asigna un agente inmobiliario} \\
+	\hline
+	\multirow{2}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Arrendatario --- Arrendador} \\
+	                                     & \multicolumn{5}{l|[2pt]}{Arrendatario --- Agente inmobiliario} \\
+
+	\hline
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{} \\
+	\hline
+	\textbf{Autor}           & Grupo A2 & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{3cm}|p{8.81cm}|p{3cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{3}{|[2pt]l|[2pt]}{\textbf{Atributos}} \\
+	\hline
+	\textbf{Nombre} & \textbf{Descripción} & \textbf{Tipo} \\
+	\hline
+	Datos personales & Nombre, Apellido, DNI, correo, teléfono\ldots & Lista de cadenas de caracteres \\
+	\hline
+	Historial & Lista de búsquedas anteriores & \\
+	\hline
+	Ubicación & Lugar donde se buscan las viviendas & Lista de coordenadas\\
+	\hline
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Comentarios} \\
+	\hline
+	\\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\section{Agente inmobiliario}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Agente inmobiliario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-01}} \\
+	\hline
+	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Empleado de la agencia inmobiliaria} \\
+	\hline
+	\multirow{3}{*}{\textbf{Características}} & \multicolumn{5}{l|[2pt]}{Gestiona la relacion entre arrendador y arrendatario} \\
+	                                          & \multicolumn{5}{l|[2pt]}{Gestiona las citas entre clientes} \\
+	                                          & \multicolumn{5}{l|[2pt]}{Gestiona las citas entre arrendador y tasador} \\
+	\hline
+	\multirow{2}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Agente inmobiliario --- Arrendador} \\
+	                                     & \multicolumn{5}{l|[2pt]}{Agente inmobiliario --- Arrendatario} \\
+	\hline
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{} \\
+	\hline
+	\textbf{Autor}           & Grupo A2 & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{3cm}|p{8.81cm}|p{3cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{3}{|[2pt]l|[2pt]}{\textbf{Atributos}} \\
+	\hline
+	\textbf{Nombre} & \textbf{Descripción} & \textbf{Tipo} \\
+	\hline
+	Datos personales & Nombre, Apellido, DNI, correo, teléfono\ldots & Lista de cadenas de caracteres \\
+	\hline
+	Datos de inmobiliaria & Nombre de la inmobiliaria, número de empleado, expediente & Lista de cadenas de caracteres\\
+	\hline
+	Contratos & Contratos que gestiona & Lista de contratos \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Comentarios} \\
+	\hline
+	\\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\section{Tasador}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Tasador}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-01}} \\
+	\hline
+	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Persona contratada por la agencia para poner precio a las viviendas} \\
+	\hline
+	\multirow{1}{*}{\textbf{Características}} & \multicolumn{5}{l|[2pt]}{Visita viviendas para decidir su precio} \\
+	\hline
+	\multirow{1}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Tasador --- Agente inmobiliario} \\
+	\hline
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{} \\
+	\hline
+	\textbf{Autor}           & Grupo A2 & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{3cm}|p{8.81cm}|p{3cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{3}{|[2pt]l|[2pt]}{\textbf{Atributos}} \\
+	\hline
+	\textbf{Nombre} & \textbf{Descripción} & \textbf{Tipo} \\
+	\hline
+	Datos personales & Nombre, Apellido, DNI, correo, teléfono\ldots & Lista de cadenas de caracteres \\
+	\hline
+	Viviendas & Propiedades que ha tasado & \\
+	\hline
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Comentarios} \\
+	\hline
+	\\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\section{Intercambiador}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Intercambiador}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-01}} \\
+	\hline
+	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Arrendador del programa de intercambio} \\
+	\hline
+	\multirow{2}{*}{\textbf{Características}} & \multicolumn{5}{l|[2pt]}{Intercambia sus viviendas con otros propietarios en cortos periodos de tiempo} \\
+	                                          & \multicolumn{5}{l|[2pt]}{Pone algunas viviendas en el sistema de intercambio} \\
+	\hline
+	\multirow{1}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Intercambiador --- Intercambiador} \\
+	\hline
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{} \\
+	\hline
+	\textbf{Autor}           & Grupo A2 & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{3cm}|p{8.81cm}|p{3cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{3}{|[2pt]l|[2pt]}{\textbf{Atributos}} \\
+	\hline
+	\textbf{Nombre} & \textbf{Descripción} & \textbf{Tipo} \\
+	\hline
+	Datos personales & Nombre, Apellido, DNI, correo, teléfono\ldots & Lista de cadenas de caracteres \\
+	\hline
+	Historial de intercambios & Lista de todos los intercambios que ha hecho & \\
+	\hline
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Comentarios} \\
+	\hline
+	\\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
