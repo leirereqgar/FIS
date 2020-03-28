@@ -1,1 +1,152 @@
 \chapter{Descripción general de los casos de uso}
+\section{Gestión de usuarios}
+\subsection{Dar de alta un nuevo usuario}
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Dar de alta a un nuevo usuario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_03}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador, arrendatario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-1.1} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{Los datos del usuario se quedan guardados en la base de datos} \\
+	\hline
+	\textbf{Autor}          & Leire Requena Garcia & \textbf{Fecha} & 28/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir el registro de nuevos usuarios de cualquier tipo\\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El usuario introduce sus datos personales y el sistema crea un nuevo registro en la base de datos con ellos, y le da acceso al usuario.\\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsection{Consulta de un usuario}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Consulta de un usuario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_03}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador, arrendatario, agente inmobiliario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-1.1} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{Debe existir el usuario en la base de datos} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{Se obtiene la información del usuario} \\
+	\hline
+	\textbf{Autor}          & Leire Requena Garcia & \textbf{Fecha} & 28/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Consultar los datos de un usuario \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El interesado accede a la información de un usuario dado de alta en el sistema, como puede ser su historial, la lista de citas con propietarios o agentes inmobiliarios... \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsection{Modificación de un usuario}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Modificación de un usuario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_03}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador, arrendatario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-3.3} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{El usuario debe estar dado de alta con anterioridad} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{Se modifica la información relativa en la base de datos} \\
+	\hline
+	\textbf{Autor}          & Leire Requena Garcia & \textbf{Fecha} & 28/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Modificar la información relativa a los datos personales de ese usuario \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El interesado accede al sistema para modificar la información relativa \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsection{Baja de usuario}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Baja de un usuario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_03}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendatario, arrendador y agente inmobiliario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-1.2} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{El usuario debe estar dado de alta en el sistema} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{El perfil desaparecerá de las bases de datos} \\
+	\hline
+	\textbf{Autor}          & Leire Requena Garcia & \textbf{Fecha} & 28/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Eliminar del sistema el perfil del usuario y sus datos asociados \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	Permite dar de baja a un usuario, esta acción la puede hacer el usuario, ya sea arrendador o arrendatario o un agente inmobiliario \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
