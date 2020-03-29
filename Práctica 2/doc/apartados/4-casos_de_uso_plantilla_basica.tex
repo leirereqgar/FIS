@@ -1,10 +1,10 @@
 \chapter{Descripción general de los casos de uso}
 \section{Gestión de usuarios}
-\subsection{Dar de alta un nuevo usuario}
+\subsection{Dar de alta un nuevo usuario}\label{CU-4.1.1}
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Dar de alta a un nuevo usuario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_03}} \\
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Dar de alta a un nuevo usuario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_01}} \\
 	\hline
 	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador, arrendatario} \\
 	\hline
@@ -37,12 +37,12 @@
 \end{tabu}
 \end{center}
 
-\subsection{Consulta de un usuario}
+\subsection{Consulta de un usuario}\label{CU-4.1.2}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Consulta de un usuario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_03}} \\
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Consulta de un usuario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_02}} \\
 	\hline
 	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador, arrendatario, agente inmobiliario} \\
 	\hline
@@ -75,7 +75,7 @@
 \end{tabu}
 \end{center}
 
-\subsection{Modificación de un usuario}
+\subsection{Modificación de un usuario}\label{CU-4.1.3}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -113,12 +113,12 @@
 \end{tabu}
 \end{center}
 
-\subsection{Baja de usuario}
+\subsection{Baja de usuario}\label{CU-4.1.4}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Baja de un usuario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_03}} \\
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Baja de un usuario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_04}} \\
 	\hline
 	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendatario, arrendador y agente inmobiliario} \\
 	\hline
@@ -147,6 +147,453 @@
 	\textbf{Resumen} \\
 	\hline
 	Permite dar de baja a un usuario, esta acción la puede hacer el usuario, ya sea arrendador o arrendatario o un agente inmobiliario \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\section{Gestión de viviendas}
+\subsection{Alta de vivienda}\label{CU-4.2.1}
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Alta de vivienda}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_05}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.1} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{El usuario debe estar registrado en el sistema} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{La información de la vivienda pasa a estar en la base de datos} \\
+	\hline
+	\textbf{Autor}          & Rafael Guzmán Valverde & \textbf{Fecha} & 28/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Introducir una nueva vivienda en la base de datos \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	Se introduce toda la información de la vivienda y pasa a estar dentro de la base de datos \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsection{Modificación de vivienda}\label{CU-4.2.2}
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Modificación de vivienda}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_06}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador, tasador} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.4} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{La vivienda debe estar con anterioridad en el sistema} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{LA información relativa a la vivienda cambia} \\
+	\hline
+	\textbf{Autor}          & Rafael Guzmán Valverde & \textbf{Fecha} & 28/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Modificar la información relativa a la vivienda \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El tasador podrá poner el precio una vez cuando visite la vivienda y el propietario podrá marcar la vivienda como de intercambio o bajar y subir el precio si lo ve necesario \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsection{Consulta de vivienda}\label{CU-4.2.3}
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Consulta de vivienda}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_07}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador, arrendatario y agente inmobiliario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.3} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{La vivienda debe estar en el sistema con anterioridad} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{Se accede a la información de la vivienda} \\
+	\hline
+	\textbf{Autor}          & Rafael Guzmán Valverde & \textbf{Fecha} & 28/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Consultar la información relativa a una vivienda \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El interesado solicita consultar la información de la vivienda deseada y se le muestra esa vista de la base de datos del sistema \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsection{Baja de vivienda}\label{CU-4.2.4}
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Baja de vivienda}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_08}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Agente inmobiliario, arrendador} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.2} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{Debe existir la vivienda en el sistema} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{La información de la vivienda se elimina de la base de datos del sistema} \\
+	\hline
+	\textbf{Autor}          & Rafael Guzmán Valverde & \textbf{Fecha} & 28/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Eliminar una vivienda del sistema \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El agente inmobiliario puede borrar cualquier vivienda del sistema y el arredador solo las que son de su propiedad \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\section{Gestión de contratos}
+\subsection{Firma del contrato}\label{CU-4.3.1}
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Firma del contrato}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_09}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Agente inmobiliario, arrendador y arrendatario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-3.1} & \multicolumn{3}{l|[2pt]}{CU-08} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{El contrato se formaliza} \\
+	\hline
+	\textbf{Autor}          & Rafael Guzmán Valverde & \textbf{Fecha} & 28/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Dejar constancia de que el contrato se ha formalizado \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	Mediante esta función el agente inmobiliario deja constancia del contrato entre arrendador y arrendatario y da de baja temporal la vivienda \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsection{Realizar pago}\label{CU-4.3.2}
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Realizar pago}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_10}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador y arrendatario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-3.2} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{Debe haber un contrato formalizado} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{Se realiza el pago} \\
+	\hline
+	\textbf{Autor}          & Rafael Guzmán Valverde & \textbf{Fecha} & 28/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Realizar el pago del alquiler \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El arrendatario paga al alquiler al arrendador, el registro de pagos queda guardado en el sistema \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{4.3.2.1: Pago con tarjeta}\label{CU-4.3.2.1}
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Pago con tarjeta}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_10.1}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador, arrendatario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{} & \multicolumn{3}{l|[2pt]}{CU-10} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{Debe haber un contrato formalizado} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{} \\
+	\hline
+	\textbf{Autor}          & Leire Requena Garcia & \textbf{Fecha} & 29/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Realizar el pago por medio de un lector de tarjetas \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	Se selecciona el pago con tarjeta y queda guardado en el registro \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{4.3.2.2: Pago con transferencia}\label{CU-4.3.2.2}
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Pago con transferencai}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_10.2}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador, arrendatario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{} & \multicolumn{3}{l|[2pt]}{CU-10} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{Debe haber un contrato formalizado} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{} \\
+	\hline
+	\textbf{Autor}          & Leire Requena Garcia & \textbf{Fecha} & 29/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Realizar el pago por medio de una transferencia bancaria \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	Se selecciona el pago por transferencia y queda guardado en el registro \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{4.3.2.3: Pago en efectivo}\label{CU-4.3.2.3}
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Pago en efectivo}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_10.3}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador, arrendatario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{} & \multicolumn{3}{l|[2pt]}{CU-10} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{Debe haber un contrato formalizado} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{} \\
+	\hline
+	\textbf{Autor}          & Leire Requena Garcia & \textbf{Fecha} & 29/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Realizar el pago en efectivo \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	Se selecciona el pago en efectivo (aunque es un método más incómodo) y queda guardado en el registro \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\section{Gestión de incidencias}
+\subsection{Envío incidencia}\label{CU-4.4.1}
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Envío de una incidencia}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_11}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendatario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-3.3} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{El arrendatario debe estar registrado en el sistema} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{Se envía una incidencia al sistema} \\
+	\hline
+	\textbf{Autor}          & Alejandro Molina Criado & \textbf{Fecha} & 28/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Notificar de algúna incidencia en la vivienda \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El arrendatario notifica de una incidencia ocurrida en la vivienda y se notifica a la asistencia técnica \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsection{Modificar incidencia}\label{CU-4.4.2}
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Modificar una incidencia}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_12}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendatario, asistencia técnica} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-3.3} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{La incidencia debe estar abierta} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{El sistema guarda los cambios en la incidencia} \\
+	\hline
+	\textbf{Autor}          & Alejandro Molina Criado & \textbf{Fecha} & 28/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Modificar la información de una incidencia \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El arrendatario o la asistencia técnica modifican la incidencia, pudiendo también cambiar su estado \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsection{Consulta incidencia}\label{CU-4.4.3}
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Consulta de incidencia}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_13}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendatario, asistencia técnica} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-3.3} & \multicolumn{3}{l|[2pt]}{CU-12} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{Debe haber una incidencia abierta o cerrada} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{} \\
+	\hline
+	\textbf{Autor}          & Alejandro Molina Criado & \textbf{Fecha} & 29/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Consultar la información y estado de una incidencia \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El interesado puede acceder a la información y estado de una incidencia \\
 	\tabucline[2pt]{-}
 \end{tabu}
 \end{center}
