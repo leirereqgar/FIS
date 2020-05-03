@@ -1,0 +1,54 @@
+\documentclass[10pt]{report}
+
+% Language and input encoding
+
+\usepackage[spanish]{babel}
+
+% Document settings
+
+\usepackage{titling}
+	\author{Rafael Guzmán Valverde, Alejandro Molina Criado, Leire Requena García}
+	\title{Fundamentos\ de\ la\ Ingeniería\ del\ Software}
+	\date{\today}
+
+\usepackage[title=\thetitle]{aqademia}
+\usepackage[title=\thetitle]{aqademia}
+\usepackage{colortbl}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{tabu}
+\tabulinesep=1mm
+\aqchap{Apartado }
+\aqsec{}
+\aqssec{}
+\aqsssec{}
+
+\usepackage{enumerate}
+% Document composition
+
+\begin{document}
+
+\aqtitlepage[nolicense]
+            {Universidad de Granada}
+            {Práctica 3}
+            {}
+\tableofcontents
+
+\pagebreak
+
+\input{apartados/diagrama-conceptos.tex}
+
+\chapter{Diagramas de Secuencia del Sistema}
+\input{apartados/gestion-alquileres.tex}
+\input{apartados/gestion-clientes.tex}
+\input{apartados/gestion-intercambio.tex}
+\input{apartados/gestion-miembros-intercambios.tex}
+\input{apartados/gestion-viviendas-alquiler.tex}
+\input{apartados/gestion-viviendas-intercambio.tex}
+\input{apartados/gestion-identificacion.tex}
+
+\aqapp{Apéndice }%
+\addcontentsline{toc}{part}{Apéndices}
+\input{apartados/glosario.tex}
+
+\end{document}
