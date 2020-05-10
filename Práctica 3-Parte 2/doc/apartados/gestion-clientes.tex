@@ -1,1 +1,82 @@
 \section{Gestión de clientes}
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{nuevoCliente (dni,nombre,apellidos,direccion,cuentaDelBanco)} \\
+\midrule
+\textbf{Responsabilidad} & Registrar un nuevo cliente en el sistema\\
+\textbf{Tipo}            & GestionClientes		      \\
+\textbf{Notas}           &                                    \\
+\textbf{Excepciones}     & Si el cliente ya existe            \\
+\textbf{Salida}          & idCliente                                   \\
+\textbf{Precondiciones}  &                                    \\
+\textbf{Postcondiciones} & Se creó un objeto de la clase Cliente con dni, nombre, apellidos, direccion y cuentaDelBanco.    \\Se asigna al cliente un idCliente que se da como salida\\
+\textbf{Autor}           & Rafael Guzmán Valverde                                  \\
+\end{tabular}
+
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{modificarCliente (idCliente,dni,combre,apellidos,direccion,cuentaDelBanco)} \\
+\midrule
+\textbf{Responsabilidad} &  Modificar los datos relativos a un cliente                                  \\
+\textbf{Tipo}            &  GestionClientes                                  \\
+\textbf{Notas}           &                                    \\
+\textbf{Excepciones}     &  Si el cliente no existe                                  \\
+\textbf{Salida}          &                                    \\
+\textbf{Precondiciones}  &  Existe un objeto Clienta para idCliente                                  \\
+\textbf{Postcondiciones} &  Se modificaron los datos del cliente con los datos aportados por la operación                                  \\
+\textbf{Autor}           & Rafael Guzmán Valverde                                    \\
+\end{tabular}
+
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{eliminarCliente (idCliente)} \\
+\midrule
+\textbf{Responsabilidad} & Eliminar un objeto Cliente del sistema                                    \\
+\textbf{Tipo}            & GestionClientes                                   \\
+\textbf{Notas}           &                                    \\
+\textbf{Excepciones}     &                                    \\
+\textbf{Salida}          &                                    \\
+\textbf{Precondiciones}  & Existe el objeto Cliente identificado con idCliente                                   \\
+\textbf{Postcondiciones} & Se eliminó del sistema el objeto Cliente identificado con idCliente  \\ Se eliminó el enlace entre el objeto Cliente y todos los objetos de ViviendaAlquiler asociados \\
+\textbf{Autor}           & Rafael Guzmán Valverde                                    \\
+\end{tabular}
+
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{consultarCliente (idCliente)} \\
+\midrule
+\textbf{Responsabilidad} & Mostrar la información relativa a un cliente                                   \\
+\textbf{Tipo}            & GestionClientes                                   \\
+\textbf{Notas}           &                                    \\
+\textbf{Excepciones}     &                                    \\
+\textbf{Salida}          & InfoCliente = lista de \code{ \{dni,nombre,apellidos,direccion,cuentaDelBanco\} }                                  \\
+\textbf{Precondiciones}  & Existe el objeto cliente identificado con idCliente                                    \\
+\textbf{Postcondiciones} & Se ha devuelto una lista con los datos del objeto cliente                                   \\
+\textbf{Autor}           & Rafael Guzmán Valverde                                    \\
+\end{tabular}
+
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{viviendasAlquiladasCliente (idCliente)} \\
+\midrule
+\textbf{Responsabilidad} & Mostrar todas las viviendas alquiladas por un cliente                                   \\
+\textbf{Tipo}            & GestionClientes                                   \\
+\textbf{Notas}           &                                    \\
+\textbf{Excepciones}     & El cliente no tiene viviendas alquiladas                                   \\
+\textbf{Salida}          & listaIdViviendas                                   \\
+\textbf{Precondiciones}  & Existe un objeto cliente con idCliente                                   \\
+\textbf{Postcondiciones} & Se ha devuelto la lista con todas las IdViviendasAlquiler de los objetos ViviendasAlquieler enlazados con el objeto cliente                                   \\
+\textbf{Autor}           & Rafael Guzmán Valverde                                    \\
+\end{tabular}
+
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{cobrarAlquiler (idCliente,idViviendaAlquiler,mensualidad,fecha)} \\
+\midrule
+\textbf{Responsabilidad} & Cobra al cliente todas las viviendas que ha alquilado                                   \\
+\textbf{Tipo}            & GestionClientes                                   \\
+\textbf{Notas}           &                                    \\
+\textbf{Excepciones}     & El cliente no tiene viviendas alquiladas                                   \\
+\textbf{Salida}          & Recibos = lista de \code{\{idCliente,idViviendaAlquiler,mensualidad,fecha\}}                                   \\
+\textbf{Precondiciones}  & Existe el objeto Cliente con idCliente                                   \\
+\textbf{Postcondiciones} & Devolvió en recibos una lista con la identificación del objeto de ViviendaAlquiler, la identificación del objeto de Cliente y mensualidad                                   \\
+\textbf{Autor}           & Rafael Guzmán Valverde                                    \\
+\end{tabular}
+
+
+\end{center}
