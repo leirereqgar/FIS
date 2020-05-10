@@ -1,1 +1,188 @@
 \section{Gestión de viviendas en alquiler}
+\subsection{\texttt{altaViviendaAlquiler}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{altaViviendaAlquiler (idCliente, esCasa, direccion, cuotaMensualBase, variacionAdmitidaCuota, descripcion, foto)} \\
+\midrule
+\textbf{Responsabilidad} & Dar de alta una vivienda de alquiler\\
+\textbf{Tipo}            & Gestión Viviendas Alquiler \\
+\textbf{Notas}           & \\
+\textbf{Excepciones}     & Existe ya una vivienda de alquiler con \code{direccion} \\
+\textbf{Salida}          & \code{idViviendaAlquiler} = identificador único de la vivienda\\
+\textbf{Precondiciones}  & Existe el cliente con \code{idCliente}, y \code{esCasa}, \code{direccion}, \code{cuotaMensualBase}, \code{variacionAdmitidaCuota}, \code{descripcion} y \code{foto} de la vivienda son válidos\\
+\textbf{Postcondiciones} & Se creó un objeto \code{ViviendaAlquiler} con identificador \code{idViviendaAlquiler}\\
+\textbf{Autor}           & Leire Requena Garcia \\
+\end{tabular}
+\end{center}
+
+
+
+\subsection{\texttt{modificarDatosViviendaAlquiler}}
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{modificarDatosViviendaAlquiler (idViviendaAlquiler, idCliente, esCasa, direccion, cuotaMensualBase, variacionAdmitidaCuota, descripcion, foto)} \\
+\midrule
+\textbf{Responsabilidad} & Modificar los datos de una vivienda dada de alta\\
+\textbf{Tipo}            & Gestión Viviendas Alquiler\\
+\textbf{Notas}           & \\
+\textbf{Excepciones}     & \\
+\textbf{Salida}          & \\
+\textbf{Precondiciones}  & Existe una vivienda de alquiler con el identificador \code{idViviendaAlquiler}\\
+\textbf{Postcondiciones} & Se modificó la información de la vivienda\\
+\textbf{Autor}           & Leire Requena Garcia\\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{bajaViviendaAlquiler}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{bajaViviendaAlquiler (idViviendaAlquiler)} \\
+\midrule
+\textbf{Responsabilidad} & Dar de baja una vivienda de alquiler\\
+\textbf{Tipo}            & Gestión Viviendas Alquiler\\
+\textbf{Notas}           & \\
+\textbf{Excepciones}     & La vivienda ya se ha dado de baja\\
+\textbf{Salida}          & \\
+\textbf{Precondiciones}  & Existe el objeto vivienda de alquiler identificado por \code{idViviendaAlquiler}\\
+\textbf{Postcondiciones} & Se dió de baja la vivienda eliminando el objeto del sistema\\
+\textbf{Autor}           & Leire Requena Garcia\\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{consultarDatosViviendaAlquiler}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{consultarDatosViviendaAlquiler (idViviendaAlquiler)} \\
+\midrule
+\textbf{Responsabilidad} & \\
+\textbf{Tipo}            & Gestión Viviendas Alquiler\\
+\textbf{Notas}           & \\
+\textbf{Excepciones}     & \\
+\textbf{Salida}          & \code{infoViviendaAlquiler} = lista compuesta por los atributos de la vivienda de alquiler(\code{direccion}, \code{cuotaMensualBase}, \code{variacionAdmitidaCuota}, \code{descripcion})\\
+\textbf{Precondiciones}  & Existe el objeto \code{ViviendaAlquiler} identificado por \code{idViviendaAlquiler}\\
+\textbf{Postcondiciones} & \\
+\textbf{Autor}           & Leire Requena Garcia\\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{altaOfertaViviendaAlquiler}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{altaOfertaViviendaAlquiler (idViviendaAlquiler, fechaInicio, fechaFin, condicionesAlquiler)} \\
+\midrule
+\textbf{Responsabilidad} & Publicar la oferta de una vivienda de alquiler\\
+\textbf{Tipo}            & Gestión Viviendas Alquiler\\
+\textbf{Notas}           & \\
+\textbf{Excepciones}     & La vivienda ya tiene una oferta publicada\\
+\textbf{Salida}          & \code{idOfertaAlquiler} = identificador único de la oferta\\
+\textbf{Precondiciones}  & Existe el objeto \code{ViviendaAlquiler} con el identificador \code{idViviendaAlquiler} y la \code{fechaInicio} y \code{fechaFin} son válidas\\
+\textbf{Postcondiciones} & Se creó un objeto \code{OfertaAlquiler}\\
+\textbf{Autor}           & Leire Requena Garcia\\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{altaPublicidad}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{altaPublicidad (idViviendaAlquiler, descripcion, fechaInicio, fechaFin)} \\
+\midrule
+\textbf{Responsabilidad} & Publicar la oferta de alquiler de una vivienda\\
+\textbf{Tipo}            & Gestión Viviendas Alquiler\\
+\textbf{Notas}           & \\
+\textbf{Excepciones}     & \\
+\textbf{Salida}          & \code{idPublicidad} = identificador único del anuncio\\
+\textbf{Precondiciones}  & Existe una vivienda con identificador \code{idViviendaAlquiler}\\
+\textbf{Postcondiciones} & Se creó un objeto \code{Publicidad} asociado a la vivienda\\
+\textbf{Autor}           & Leire Requena Garcia\\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{bajaOfertaAlquilerVivienda}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{bajaOfertaAlquilerVivienda (idOfertaAlquiler)} \\
+\midrule
+\textbf{Responsabilidad} & Dar de baja una oferta de alquiler de vivienda\\
+\textbf{Tipo}            & Gestión Viviendas Alquiler\\
+\textbf{Notas}           & \\
+\textbf{Excepciones}     & La oferta ya se ha dado de baja\\
+\textbf{Salida}          & \\
+\textbf{Precondiciones}  & Existe el objeto \code{OfertaAlquiler} con identificador \code{idOfertaAlquiler}\\
+\textbf{Postcondiciones} & Se eliminó el objeto \code{OfertaAlquiler}\\
+\textbf{Autor}           & Leire Requena Garcia\\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{bajaPublicidad}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{bajaPublicidad (idPublicidad)} \\
+\midrule
+\textbf{Responsabilidad} & Dar de baja la publicidad de una vivienda\\
+\textbf{Tipo}            & Gestión Viviendas Alquiler\\
+\textbf{Notas}           & \\
+\textbf{Excepciones}     & La publicidad ya se ha dado de baja\\
+\textbf{Salida}          & \\
+\textbf{Precondiciones}  & Existe el objeto \code{Publicidad} con identificador \code{idPublicidad}\\
+\textbf{Postcondiciones} & Se eliminó el objeto \code{Publicidad}\\
+\textbf{Autor}           & Leire Requena Garcia\\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{modificarOfertaAlquilerVivienda}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{modificarOfertaAlquilerVivienda (idOfertaAlquiler, fechaInicio, fechaFin, condicionesAlquiler)} \\
+\midrule
+\textbf{Responsabilidad} & Modificar la información de una oferta de alquiler\\
+\textbf{Tipo}            & Gestión Viviendas Alquiler\\
+\textbf{Notas}           & \\
+\textbf{Excepciones}     & \\
+\textbf{Salida}          & \\
+\textbf{Precondiciones}  & Existe el objeto \code{OfertaAlquiler} con identificador \code{idOfertaAlquiler}\\
+\textbf{Postcondiciones} & Se modificó la oferta de alquiler\\
+\textbf{Autor}           & Leire Requena Garcia\\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{modificarPublicidad}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{modificarPublicidad (idPublicidad, descripcion, fechaInicio, fechaFin)} \\
+\midrule
+\textbf{Responsabilidad} & Modificar la información de la publicidad de una vivienda\\
+\textbf{Tipo}            & Gestión Viviendas Alquiler\\
+\textbf{Notas}           & \\
+\textbf{Excepciones}     & \\
+\textbf{Salida}          & \\
+\textbf{Precondiciones}  & Existe el objeto \code{Publicidad} con identificador \code{idPublicidad}\\
+\textbf{Postcondiciones} & Se modificaron los datos de la publicidad\\
+\textbf{Autor}           & Leire Requena Garcia\\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{consultarOfertaAlquiler}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{consultarOfertaAlquiler (idOfertaAlquiler)} \\
+\midrule
+\textbf{Responsabilidad} & Consultar una oferta de alquiler\\
+\textbf{Tipo}            & Gestión Viviendas Alquiler\\
+\textbf{Notas}           & \\
+\textbf{Excepciones}     & \\
+\textbf{Salida}          & \code{infoOfertaAlquiler} = lista compuesta por \{\code{fechaInicio}, \code{fechaFin}, \code{descripcion}\}\\
+\textbf{Precondiciones}  & Existe el objeto \code{OfertaAlquiler} identificado por \code{idOfertaAlquiler}\\
+\textbf{Postcondiciones} & \\
+\textbf{Autor}           & Leire Requena Garcia\\
+\end{tabular}
+\end{center}
