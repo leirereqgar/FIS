@@ -1,12 +1,205 @@
 \section{Gestión de alquileres}
-\subsection{\texttt{nombreContrato}}
+\subsection{\texttt{consultarContratoAlquiler:}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
-\textbf{Nombre}          & \code{nombreContrato (argumentos)} \\
+\textbf{Nombre}          & \code{consultarContratoAlquiler (idContratoAlquiler)} \\
+\midrule
+\textbf{Responsabilidad} & {\texttt{Consulta el contrato del alquiler identificado con idContratoAlquiler}}                                    \\
+\textbf{Tipo}            & {\texttt{GestionAlquileres}}                                \\
+\textbf{Notas}           & {\texttt{se podrán consultar todos los aspectos relacionados con ese contrato}}                                   \\
+\textbf{Excepciones}     &                                    \\
+\textbf{Salida}          & {\texttt{infoContratoAlquiler}}                                  \\
+\textbf{Precondiciones}  &                                    \\
+\textbf{Postcondiciones} &                                    \\
+\textbf{Autor}           &                                    \\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{altaAveria:}}
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{altaAveria (idViviendaAlquiler , descripcionAveria , fechaNotificacion)} \\
 \midrule
 \textbf{Responsabilidad} &                                    \\
-\textbf{Tipo}            &                                    \\
+\textbf{Tipo}            & {\texttt{GestionAlquileres}}                                      \\
+\textbf{Notas}           &                                    \\
+\textbf{Excepciones}     &                                    \\
+\textbf{Salida}          &                                    \\
+\textbf{Precondiciones}  &                                    \\
+\textbf{Postcondiciones} &                                    \\
+\textbf{Autor}           &                                    \\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{altaContratoAlquiler:}}
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{altaContratoAlquiler (idViviendaAlquiler , idInquilino , fechaInicioContrato , fechaFinContrato , fianza , cuotaMensual)} \\
+\midrule
+\textbf{Responsabilidad} &                                    \\
+\textbf{Tipo}            & {\texttt{GestionAlquileres}}                                     \\
+\textbf{Notas}           &                                    \\
+\textbf{Excepciones}     &                                    \\
+\textbf{Salida}          &                                    \\
+\textbf{Precondiciones}  &                                    \\
+\textbf{Postcondiciones} &                                    \\
+\textbf{Autor}           &                                    \\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{altaInquilino:}}
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{altaInquilino (dni , nombre , apellidos , direccion , numeroCuentaBanca)} \\
+\midrule
+\textbf{Responsabilidad} &                                    \\
+\textbf{Tipo}            & {\texttt{GestionAlquileres}}                                     \\
+\textbf{Notas}           &                                    \\
+\textbf{Excepciones}     &                                    \\
+\textbf{Salida}          &                                    \\
+\textbf{Precondiciones}  &                                    \\
+\textbf{Postcondiciones} &                                    \\
+\textbf{Autor}           &                                    \\
+\end{tabular}
+\end{center}
+
+
+\subsection{\texttt{bajaInquilino:}}
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{bajaInquilino (idInquilino)} \\
+\midrule
+\textbf{Responsabilidad} &                                    \\
+\textbf{Tipo}            & {\texttt{GestionAlquileres}}                                     \\
+\textbf{Notas}           &                                    \\
+\textbf{Excepciones}     &                                    \\
+\textbf{Salida}          &                                    \\
+\textbf{Precondiciones}  &                                    \\
+\textbf{Postcondiciones} &                                    \\
+\textbf{Autor}           &                                    \\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{devolverFianzaInquilino:}}
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{devolverFianzaInquilino (idContratoAlquiler , fecha)} \\
+\midrule
+\textbf{Responsabilidad} &                                    \\
+\textbf{Tipo}            & {\texttt{GestionAlquileres}}                                     \\
+\textbf{Notas}           &                                    \\
+\textbf{Excepciones}     &                                    \\
+\textbf{Salida}          &                                    \\
+\textbf{Precondiciones}  &                                    \\
+\textbf{Postcondiciones} &                                    \\
+\textbf{Autor}           &                                    \\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{pagarReciboMetalico:}}
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{pagarReciboMetalico (idInquilino , idContratoAlquiler , mensualidad , fecha)} \\
+\midrule
+\textbf{Responsabilidad} &                                    \\
+\textbf{Tipo}            & {\texttt{GestionAlquileres}}                                     \\
+\textbf{Notas}           &                                    \\
+\textbf{Excepciones}     &                                    \\
+\textbf{Salida}          &                                    \\
+\textbf{Precondiciones}  &                                    \\
+\textbf{Postcondiciones} &                                    \\
+\textbf{Autor}           &                                    \\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{añadirPagoCuentaCliente:}}
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{añadirPagoCuentaCliente (idCliente , idContratoAlquiler , mensualidad , fecha)} \\
+\midrule
+\textbf{Responsabilidad} &                                    \\
+\textbf{Tipo}            & {\texttt{GestionAlquileres}}                                     \\
+\textbf{Notas}           &                                    \\
+\textbf{Excepciones}     &                                    \\
+\textbf{Salida}          &                                    \\
+\textbf{Precondiciones}  &                                    \\
+\textbf{Postcondiciones} &                                    \\
+\textbf{Autor}           &                                    \\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{obtenerRecibosDevueltos:}}
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{obtenerRecibosDevueltos (idInquilino , fecha)} \\
+\midrule
+\textbf{Responsabilidad} &                                    \\
+\textbf{Tipo}            & {\texttt{GestionAlquileres}}                                     \\
+\textbf{Notas}           &                                    \\
+\textbf{Excepciones}     &                                    \\
+\textbf{Salida}          &                                    \\
+\textbf{Precondiciones}  &                                    \\
+\textbf{Postcondiciones} &                                    \\
+\textbf{Autor}           &                                    \\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{obtenerRecibosPagados:}}
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{obtenerRecibosPagados (idInquilino , fecha)} \\
+\midrule
+\textbf{Responsabilidad} &                                    \\
+\textbf{Tipo}            & {\texttt{GestionAlquileres}}                                     \\
+\textbf{Notas}           &                                    \\
+\textbf{Excepciones}     &                                    \\
+\textbf{Salida}          &                                    \\
+\textbf{Precondiciones}  &                                    \\
+\textbf{Postcondiciones} &                                    \\
+\textbf{Autor}           &                                    \\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{iniciarTramiteMoroso:}}
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{iniciarTramiteMoroso (idInquilino , listaRecibosDevueltos , fecha)} \\
+\midrule
+\textbf{Responsabilidad} &                                    \\
+\textbf{Tipo}            & {\texttt{GestionAlquileres}}                                     \\
+\textbf{Notas}           &                                    \\
+\textbf{Excepciones}     &                                    \\
+\textbf{Salida}          &                                    \\
+\textbf{Precondiciones}  &                                    \\
+\textbf{Postcondiciones} &                                    \\
+\textbf{Autor}           &                                    \\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{generarRecibosAlquiler:}}
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{generarRecibosAlquiler (idCliente , fecha)} \\
+\midrule
+\textbf{Responsabilidad} &                                    \\
+\textbf{Tipo}            & {\texttt{GestionAlquileres}}                                     \\
+\textbf{Notas}           &                                    \\
+\textbf{Excepciones}     &                                    \\
+\textbf{Salida}          &                                    \\
+\textbf{Precondiciones}  &                                    \\
+\textbf{Postcondiciones} &                                    \\
+\textbf{Autor}           &                                    \\
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{enviarReciboBanco:}}
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{enviarReciboBanco (idRecibo)} \\
+\midrule
+\textbf{Responsabilidad} &                                    \\
+\textbf{Tipo}            & {\texttt{GestionAlquileres}}                                     \\
 \textbf{Notas}           &                                    \\
 \textbf{Excepciones}     &                                    \\
 \textbf{Salida}          &                                    \\
